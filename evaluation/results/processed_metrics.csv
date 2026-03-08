@@ -1,0 +1,16 @@
+filename,expected,predicted,confidence,latency,correct,condition
+MoveBackward_snr0db.wav,move backward,move backward,0.418,0.48,True,0dbdB
+MoveBackward_snr10db.wav,move backward,move backward,0.308,1.36,True,10dbdB
+MoveBackward_snr20db.wav,move backward,move backward,0.345,0.96,True,20dbdB
+MoveForward_snr0db.wav,move forward,oh,0.3,1.13,False,0dbdB
+MoveForward_snr10db.wav,move forward,move forward,0.364,0.87,True,10dbdB
+MoveForward_snr20db.wav,move forward,move forward,0.387,0.3,True,20dbdB
+Stop_snr0db.wav,stop,go,0.34,0.8,False,0dbdB
+Stop_snr10db.wav,stop,stop,0.572,0.29,True,10dbdB
+Stop_snr20db.wav,stop,stop,0.377,0.31,True,20dbdB
+TurnLeft_snr0db.wav,turn left,turn left,0.368,0.31,True,0dbdB
+TurnLeft_snr10db.wav,turn left,turn left,0.377,0.3,True,10dbdB
+TurnLeft_snr20db.wav,turn left,turn left,0.373,0.3,True,20dbdB
+TurnRight_snr0db.wav,turn right,turn right,0.487,0.31,True,0dbdB
+TurnRight_snr10db.wav,turn right,turn right,0.393,0.3,True,10dbdB
+TurnRight_snr20db.wav,turn right,turn right,0.387,0.3,True,20dbdB
