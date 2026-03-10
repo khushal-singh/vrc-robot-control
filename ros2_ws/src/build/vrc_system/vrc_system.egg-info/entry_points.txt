@@ -1,0 +1,7 @@
+[console_scripts]
+asr_node = vrc_system.asr_node:main
+audio_input_node = vrc_system.audio_input_node:main
+command_node = vrc_system.command_node:main
+intent_node = vrc_system.intent_node:main
+state_machine_node = vrc_system.state_machine_node:main
+

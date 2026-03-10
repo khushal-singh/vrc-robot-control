@@ -1,0 +1,6 @@
+commands:
+  move forward: forward
+  move backward: backward
+  turn left: left
+  turn right: right
+  stop: stop

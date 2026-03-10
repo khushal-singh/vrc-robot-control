@@ -1,0 +1,5 @@
+threshold:
+  default: 0.75
+  emergency_stop: 0.9
+
+timeout: 5

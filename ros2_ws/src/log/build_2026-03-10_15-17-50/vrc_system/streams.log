@@ -1,0 +1,34 @@
+[3.913s] Invoking command in '/mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system': PYTHONPATH=/mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/build --no-deps symlink_data
+[5.490s] running develop
+[5.863s] running egg_info
+[5.864s] creating vrc_system.egg-info
+[5.865s] writing vrc_system.egg-info/PKG-INFO
+[5.876s] writing dependency_links to vrc_system.egg-info/dependency_links.txt
+[5.883s] writing entry points to vrc_system.egg-info/entry_points.txt
+[5.888s] writing requirements to vrc_system.egg-info/requires.txt
+[5.893s] writing top-level names to vrc_system.egg-info/top_level.txt
+[5.898s] writing manifest file 'vrc_system.egg-info/SOURCES.txt'
+[5.976s] reading manifest file 'vrc_system.egg-info/SOURCES.txt'
+[6.045s] writing manifest file 'vrc_system.egg-info/SOURCES.txt'
+[6.080s] running build_ext
+[6.083s] Creating /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/python3.10/site-packages/vrc-system.egg-link (link to .)
+[6.111s] Installing asr_node script to /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/vrc_system
+[6.124s] Installing audio_input_node script to /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/vrc_system
+[6.145s] Installing command_node script to /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/vrc_system
+[6.164s] Installing intent_node script to /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/vrc_system
+[6.182s] Installing state_machine_node script to /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/vrc_system
+[6.203s] 
+[6.205s] Installed /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system
+[6.207s] running symlink_data
+[6.214s] creating /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/ament_index
+[6.218s] creating /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/ament_index/resource_index
+[6.221s] creating /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/ament_index/resource_index/packages
+[6.237s] symbolically linking /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/resource/vrc_system -> /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/ament_index/resource_index/packages
+[6.253s] symbolically linking /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/package.xml -> /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system
+[6.262s] creating /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system/launch
+[6.277s] symbolically linking /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/launch/asr_pipeline.launch.py -> /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system/launch
+[6.293s] symbolically linking /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/launch/gazebo_integration.launch.py -> /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system/launch
+[6.303s] creating /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system/config
+[6.317s] symbolically linking /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/config/commands.yaml -> /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system/config
+[6.333s] symbolically linking /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/config/parameters.yaml -> /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system/config
+[6.364s] Invoked command in '/mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system' returned '0': PYTHONPATH=/mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/build --no-deps symlink_data

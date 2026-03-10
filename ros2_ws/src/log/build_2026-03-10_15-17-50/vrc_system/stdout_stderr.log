@@ -1,0 +1,32 @@
+running develop
+running egg_info
+creating vrc_system.egg-info
+writing vrc_system.egg-info/PKG-INFO
+writing dependency_links to vrc_system.egg-info/dependency_links.txt
+writing entry points to vrc_system.egg-info/entry_points.txt
+writing requirements to vrc_system.egg-info/requires.txt
+writing top-level names to vrc_system.egg-info/top_level.txt
+writing manifest file 'vrc_system.egg-info/SOURCES.txt'
+reading manifest file 'vrc_system.egg-info/SOURCES.txt'
+writing manifest file 'vrc_system.egg-info/SOURCES.txt'
+running build_ext
+Creating /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/python3.10/site-packages/vrc-system.egg-link (link to .)
+Installing asr_node script to /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/vrc_system
+Installing audio_input_node script to /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/vrc_system
+Installing command_node script to /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/vrc_system
+Installing intent_node script to /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/vrc_system
+Installing state_machine_node script to /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/lib/vrc_system
+
+Installed /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system
+running symlink_data
+creating /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/ament_index
+creating /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/ament_index/resource_index
+creating /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/ament_index/resource_index/packages
+symbolically linking /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/resource/vrc_system -> /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/ament_index/resource_index/packages
+symbolically linking /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/package.xml -> /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system
+creating /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system/launch
+symbolically linking /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/launch/asr_pipeline.launch.py -> /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system/launch
+symbolically linking /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/launch/gazebo_integration.launch.py -> /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system/launch
+creating /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system/config
+symbolically linking /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/config/commands.yaml -> /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system/config
+symbolically linking /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/build/vrc_system/config/parameters.yaml -> /mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/install/vrc_system/share/vrc_system/config

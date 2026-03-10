@@ -1,0 +1,9 @@
+source;share/vrc_system/hook/pythonpath.ps1
+source;share/vrc_system/hook/pythonpath.dsv
+source;share/vrc_system/hook/pythonpath.sh
+source;share/vrc_system/hook/ament_prefix_path.ps1
+source;share/vrc_system/hook/ament_prefix_path.dsv
+source;share/vrc_system/hook/ament_prefix_path.sh
+source;../../build/vrc_system/share/vrc_system/hook/pythonpath_develop.ps1
+source;../../build/vrc_system/share/vrc_system/hook/pythonpath_develop.dsv
+source;../../build/vrc_system/share/vrc_system/hook/pythonpath_develop.sh
