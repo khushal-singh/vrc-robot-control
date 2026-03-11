@@ -1,1 +1,0 @@
-/mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/vrc_system/setup.py
