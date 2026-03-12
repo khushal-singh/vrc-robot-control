@@ -1,14 +1,11 @@
-# ROS generated folders
 ros2_ws/build/
 ros2_ws/install/
 ros2_ws/log/
 
-# Python cache
+ros2_ws/src/build/
+ros2_ws/src/install/
+ros2_ws/src/log/
+
 __pycache__/
 *.pyc
-
-# VS Code
-.vscode/
-
-# temp files
-*.swp
+~$*

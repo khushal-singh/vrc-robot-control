@@ -1,6 +1,12 @@
+import sys
+import os
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
+
+sys.path.insert(0, '/mnt/d/AIS Project/vrc-robot-control')
+
+from asr_module.asr_engine import transcribe
 
 
 class ASRNode(Node):
@@ -24,13 +30,31 @@ class ASRNode(Node):
         self.get_logger().info('ASR node started. Waiting for /audio/raw...')
 
     def audio_callback(self, msg):
-        # Temporary ASR simulation
-        recognized_text = String()
-        recognized_text.data = 'move forward'
+        wav_path = msg.data.strip()
 
-        self.publisher.publish(recognized_text)
+        self.get_logger().info(f"Received path: {repr(wav_path)}")
 
-        self.get_logger().info(f'Published to /asr/text: {recognized_text.data}')
+        if not os.path.isfile(wav_path):
+            self.get_logger().error(f'File not found: {wav_path}')
+            return
+
+        result = transcribe(wav_path)
+
+        self.get_logger().info(f"ASR result: {result}")
+
+        if result['confidence'] >= 0.40:
+            output = String()
+            output.data = result['text']
+
+            self.publisher.publish(output)
+
+            self.get_logger().info(
+                f"Published to /asr/text: {result['text']}"
+            )
+        else:
+            self.get_logger().warn(
+                f"Low confidence ignored: {result['confidence']}"
+            )
 
 
 def main(args=None):
@@ -44,7 +68,11 @@ def main(args=None):
         pass
 
     node.destroy_node()
-    rclpy.shutdown()
+
+    try:
+        rclpy.shutdown()
+    except:
+        pass
 
 
 if __name__ == '__main__':
