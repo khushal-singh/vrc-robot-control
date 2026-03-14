@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="advanced_humanoid_robot">
+    <static>false</static>
+
+    <!-- Load the URDF as a nested model -->
+    <include>
+      <uri>file:///mnt/d/AIS Project/vrc-robot-control/ros2_ws/src/vrc_system/urdf/advanced_humanoid_robot.urdf</uri>
+    </include>
+
+    <!-- Diff drive plugin attached at model level -->
+    <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+      <ros>
+        <namespace>/</namespace>
+        <argument>cmd_vel:=cmd_vel</argument>
+        <argument>odom:=odom</argument>
+      </ros>
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      <wheel_separation>0.22</wheel_separation>
+      <wheel_diameter>0.09</wheel_diameter>
+      <command_topic>cmd_vel</command_topic>
+      <odometry_topic>odom</odometry_topic>
+      <robot_base_frame>pelvis</robot_base_frame>
+      <publish_odom>true</publish_odom>
+      <publish_wheel_tf>true</publish_wheel_tf>
+    </plugin>
+
+  </model>
+</sdf>

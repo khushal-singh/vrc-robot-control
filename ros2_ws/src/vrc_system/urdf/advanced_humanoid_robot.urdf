@@ -495,7 +495,7 @@
 
   <gazebo>
     <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
-      <left_joint>left_wheel_joint</left_joint>
+      <left_joint>left_wheel_jointX</left_joint>
       <right_joint>right_wheel_joint</right_joint>
       <wheel_separation>0.22</wheel_separation>
       <wheel_diameter>0.09</wheel_diameter>
