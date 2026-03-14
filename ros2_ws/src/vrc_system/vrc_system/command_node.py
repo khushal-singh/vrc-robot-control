@@ -2,7 +2,21 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 from geometry_msgs.msg import Twist
+import time
 
+def execute_motion(self, linear_x, angular_z, duration):
+    msg = Twist()
+    msg.linear.x = linear_x
+    msg.angular.z = angular_z
+
+    start = time.time()
+
+    while time.time() - start < duration:
+        self.publisher.publish(msg)
+        time.sleep(0.1)
+
+    stop = Twist()
+    self.publisher.publish(stop)
 
 class CommandNode(Node):
 
@@ -25,53 +39,32 @@ class CommandNode(Node):
         self.get_logger().info('Command node started. Waiting for /voice/command...')
 
     def command_callback(self, msg):
-
         command = msg.data.lower()
 
-        twist = Twist()
-
-        if command == 'move forward':
-            twist.linear.x = 0.5
-
-        elif command == 'move backward':
-            twist.linear.x = -0.5
-
-        elif command == 'turn left':
-            twist.angular.z = 0.5
-
-        elif command == 'turn right':
-            twist.angular.z = -0.5
-
-        elif command == 'stop':
-            twist.linear.x = 0.0
-            twist.angular.z = 0.0
-
-        self.publisher.publish(twist)
-
-        self.get_logger().info(
-            f'Published /cmd_vel → linear.x={twist.linear.x}, angular.z={twist.angular.z}'
-        )
-
+        if command == "move forward":
+            self.execute_motion(0.25, 0.0, 2.0)
+        elif command == "move backward":
+            self.execute_motion(-0.25, 0.0, 2.0)
+        elif command == "turn left":
+            self.execute_motion(0.0, 0.6, 1.5)
+        elif command == "turn right":
+            self.execute_motion(0.0, -0.6, 1.5)
+        elif command == "stop":
+            self.execute_motion(0.0, 0.0, 0.1)
+        
+        self.get_logger().info(f'Executed command: {command}')
 
 def main(args=None):
-
     rclpy.init(args=args)
-
     node = CommandNode()
 
     try:
         rclpy.spin(node)
-
     except KeyboardInterrupt:
         pass
 
     node.destroy_node()
-
-    try:
-        rclpy.shutdown()
-    except:
-        pass
-
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

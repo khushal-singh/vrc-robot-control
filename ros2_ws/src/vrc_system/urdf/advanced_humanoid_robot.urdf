@@ -1,0 +1,510 @@
+<?xml version="1.0"?>
+<robot name="advanced_humanoid_robot">
+
+  <!-- =============== MATERIALS =============== -->
+  <material name="white">
+    <color rgba="0.96 0.96 0.96 1"/>
+  </material>
+
+  <material name="red">
+    <color rgba="0.9 0.2 0.2 1"/>
+  </material>
+
+  <material name="black">
+    <color rgba="0.1 0.1 0.1 1"/>
+  </material>
+
+  <material name="gray">
+    <color rgba="0.4 0.4 0.4 1"/>
+  </material>
+
+  <!-- Gazebo materials for key colored parts -->
+  <gazebo reference="chest_panel">
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <gazebo reference="head_top">
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <gazebo reference="left_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="right_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <!-- =============== BASE =============== -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.24 0.18 0.08"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.24 0.18 0.08"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.25" iyy="0.25" izz="0.25"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+  <!-- =============== PELVIS / LOWER TORSO =============== -->
+  <link name="pelvis">
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <box size="0.20 0.14 0.08"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <box size="0.20 0.14 0.08"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="3.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.03" iyy="0.03" izz="0.02"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+  <joint name="pelvis_joint" type="fixed">
+    <parent link="base_link"/>
+    <!-- base height 0.08 => pelvis center at 0.12 (slightly above) -->
+    <child link="pelvis"/>
+    <origin xyz="0 0 0.12"/>
+  </joint>
+
+  <!-- Hip red pads -->
+  <link name="left_hip_pad">
+    <visual>
+      <origin xyz="0 0.11 0"/>
+      <geometry>
+        <box size="0.02 0.05 0.06"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <joint name="left_hip_pad_joint" type="fixed">
+    <parent link="pelvis"/>
+    <child link="left_hip_pad"/>
+  </joint>
+
+  <link name="right_hip_pad">
+    <visual>
+      <origin xyz="0 -0.11 0"/>
+      <geometry>
+        <box size="0.02 0.05 0.06"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <joint name="right_hip_pad_joint" type="fixed">
+    <parent link="pelvis"/>
+    <child link="right_hip_pad"/>
+  </joint>
+
+  <!-- =============== WAIST =============== -->
+  <link name="waist">
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <box size="0.18 0.13 0.06"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="waist_joint" type="fixed">
+    <parent link="pelvis"/>
+    <child link="waist"/>
+    <!-- pelvis half-height 0.04 + waist half-height 0.03 -->
+    <origin xyz="0 0 0.07"/>
+  </joint>
+
+  <!-- =============== UPPER TORSO =============== -->
+  <link name="torso">
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <box size="0.20 0.18 0.18"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <box size="0.20 0.18 0.18"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="4.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.06" iyy="0.06" izz="0.05"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+  <joint name="torso_joint" type="fixed">
+    <parent link="waist"/>
+    <child link="torso"/>
+    <!-- waist half 0.03 + torso half 0.09 -->
+    <origin xyz="0 0 0.12"/>
+  </joint>
+
+  <!-- Chest red panel -->
+  <link name="chest_panel">
+    <visual>
+      <origin xyz="0.11 0 0"/>
+      <geometry>
+        <box size="0.02 0.12 0.14"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <joint name="chest_panel_joint" type="fixed">
+    <parent link="torso"/>
+    <child link="chest_panel"/>
+  </joint>
+
+  <!-- =============== HEAD =============== -->
+  <link name="head">
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <sphere radius="0.12"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="head_joint" type="revolute">
+    <parent link="torso"/>
+    <child link="head"/>
+    <!-- torso half 0.09 + head radius 0.12 - slight overlap 0.01 -->
+    <origin xyz="0 0 0.20"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.0" upper="1.0" effort="2" velocity="1.5"/>
+  </joint>
+
+  <!-- Head top red plate -->
+  <link name="head_top">
+    <visual>
+      <origin xyz="0 0 0.13"/>
+      <geometry>
+        <box size="0.13 0.13 0.02"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <joint name="head_top_joint" type="fixed">
+    <parent link="head"/>
+    <child link="head_top"/>
+  </joint>
+
+  <!-- =============== SHOULDERS AND ARMS =============== -->
+  <!-- Left shoulder armor plate -->
+  <link name="left_shoulder_plate">
+    <visual>
+      <origin xyz="0 0.15 0.04"/>
+      <geometry>
+        <box size="0.10 0.06 0.02"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <joint name="left_shoulder_plate_joint" type="fixed">
+    <parent link="torso"/>
+    <child link="left_shoulder_plate"/>
+    <origin xyz="0 0 0.06"/>
+  </joint>
+
+  <!-- Left shoulder joint -->
+  <link name="left_shoulder">
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <sphere radius="0.055"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <joint name="left_shoulder_joint" type="revolute">
+    <parent link="torso"/>
+    <child link="left_shoulder"/>
+    <origin xyz="0 0.16 0.06"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="5" velocity="2.0"/>
+  </joint>
+
+  <!-- Left elbow ring -->
+  <link name="left_elbow_ring">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.57"/>
+      <geometry>
+        <cylinder radius="0.028" length="0.02"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <joint name="left_elbow_ring_joint" type="fixed">
+    <parent link="left_shoulder"/>
+    <child link="left_elbow_ring"/>
+    <origin xyz="0 0.08 -0.02"/>
+  </joint>
+
+  <!-- Left arm -->
+  <link name="left_arm">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.57"/>
+      <geometry>
+        <cylinder radius="0.022" length="0.22"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="left_arm_joint" type="fixed">
+    <parent link="left_elbow_ring"/>
+    <child link="left_arm"/>
+    <origin xyz="0 0.12 0"/>
+  </joint>
+
+  <!-- Right shoulder armor plate -->
+  <link name="right_shoulder_plate">
+    <visual>
+      <origin xyz="0 -0.15 0.04"/>
+      <geometry>
+        <box size="0.10 0.06 0.02"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <joint name="right_shoulder_plate_joint" type="fixed">
+    <parent link="torso"/>
+    <child link="right_shoulder_plate"/>
+    <origin xyz="0 0 0.06"/>
+  </joint>
+
+  <!-- Right shoulder joint -->
+  <link name="right_shoulder">
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <sphere radius="0.055"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <joint name="right_shoulder_joint" type="revolute">
+    <parent link="torso"/>
+    <child link="right_shoulder"/>
+    <origin xyz="0 -0.16 0.06"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="5" velocity="2.0"/>
+  </joint>
+
+  <!-- Right elbow ring -->
+  <link name="right_elbow_ring">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.57"/>
+      <geometry>
+        <cylinder radius="0.028" length="0.02"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <joint name="right_elbow_ring_joint" type="fixed">
+    <parent link="right_shoulder"/>
+    <child link="right_elbow_ring"/>
+    <origin xyz="0 -0.08 -0.02"/>
+  </joint>
+
+  <!-- Right arm -->
+  <link name="right_arm">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.57"/>
+      <geometry>
+        <cylinder radius="0.022" length="0.22"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="right_arm_joint" type="fixed">
+    <parent link="right_elbow_ring"/>
+    <child link="right_arm"/>
+    <origin xyz="0 -0.12 0"/>
+  </joint>
+
+  <!-- =============== LEGS =============== -->
+  <!-- Left leg -->
+  <link name="left_thigh">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.57"/>
+      <geometry>
+        <cylinder radius="0.035" length="0.18"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="left_thigh_joint" type="fixed">
+    <parent link="pelvis"/>
+    <child link="left_thigh"/>
+    <!-- pelvis half 0.04, thigh half 0.09 downward -->
+    <origin xyz="0 0.05 -0.13"/>
+  </joint>
+
+  <link name="left_shin">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.57"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.16"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="left_shin_joint" type="fixed">
+    <parent link="left_thigh"/>
+    <child link="left_shin"/>
+    <origin xyz="0 0 -0.17"/>
+  </joint>
+
+  <link name="left_foot">
+    <visual>
+      <origin xyz="0.05 0 0"/>
+      <geometry>
+        <box size="0.16 0.06 0.03"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="left_foot_joint" type="fixed">
+    <parent link="left_shin"/>
+    <child link="left_foot"/>
+    <origin xyz="0 0 -0.10"/>
+  </joint>
+
+  <!-- Right leg -->
+  <link name="right_thigh">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.57"/>
+      <geometry>
+        <cylinder radius="0.035" length="0.18"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="right_thigh_joint" type="fixed">
+    <parent link="pelvis"/>
+    <child link="right_thigh"/>
+    <origin xyz="0 -0.05 -0.13"/>
+  </joint>
+
+  <link name="right_shin">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.57"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.16"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="right_shin_joint" type="fixed">
+    <parent link="right_thigh"/>
+    <child link="right_shin"/>
+    <origin xyz="0 0 -0.17"/>
+  </joint>
+
+  <link name="right_foot">
+    <visual>
+      <origin xyz="0.05 0 0"/>
+      <geometry>
+        <box size="0.16 0.06 0.03"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="right_foot_joint" type="fixed">
+    <parent link="right_shin"/>
+    <child link="right_foot"/>
+    <origin xyz="0 0 -0.10"/>
+  </joint>
+
+  <!-- =============== WHEELS AND DIFF DRIVE =============== -->
+  <link name="left_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707 0 0"/>
+      <geometry>
+        <cylinder radius="0.045" length="0.03"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="pelvis"/>
+    <child link="left_wheel"/>
+    <origin xyz="0 0.11 -0.07"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <link name="right_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707 0 0"/>
+      <geometry>
+        <cylinder radius="0.045" length="0.03"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="pelvis"/>
+    <child link="right_wheel"/>
+    <origin xyz="0 -0.11 -0.07"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <gazebo>
+    <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      <wheel_separation>0.22</wheel_separation>
+      <wheel_diameter>0.09</wheel_diameter>
+      <command_topic>cmd_vel</command_topic>
+      <odometry_topic>odom</odometry_topic>
+      <robot_base_frame>pelvis</robot_base_frame>
+      <publish_odom>true</publish_odom>
+      <publish_wheel_tf>true</publish_wheel_tf>
+    </plugin>
+  </gazebo>
+
+</robot>
