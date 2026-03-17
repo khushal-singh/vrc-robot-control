@@ -2,13 +2,13 @@
 <sdf version="1.6">
   <world name="vrc_university_lab">
 
-    <!-- Lighting -->
+    <!-- Light -->
     <include>
       <uri>model://sun</uri>
     </include>
 
-    <!-- Tiled floor like a lab -->
-    <model name="lab_floor">
+    <!-- Simple floor -->
+    <model name="floor">
       <static>true</static>
       <link name="link">
         <collision name="collision">
@@ -30,135 +30,6 @@
           </material>
         </visual>
         <pose>0 0 -0.01 0 0 0</pose>
-      </link>
-    </model>
-
-    <!-- Overhead light panel to feel like a room -->
-    <model name="ceiling_light">
-      <static>true</static>
-      <link name="link">
-        <visual name="visual">
-          <geometry>
-            <box>
-              <size>1.5 1.5 0.02</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-          </material>
-        </visual>
-        <pose>0 0 3 0 0 0</pose>
-      </link>
-    </model>
-
-    <!-- Lab table -->
-    <model name="lab_table">
-      <static>true</static>
-      <link name="link">
-        <!-- table top -->
-        <visual name="top_visual">
-          <geometry>
-            <box>
-              <size>1.2 0.6 0.05</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.7 0.7 0.75 1</ambient>
-            <diffuse>0.7 0.7 0.75 1</diffuse>
-          </material>
-        </visual>
-        <collision name="top_collision">
-          <geometry>
-            <box>
-              <size>1.2 0.6 0.05</size>
-            </box>
-          </geometry>
-        </collision>
-        <pose>2 0 0.78 0 0 0</pose>
-      </link>
-    </model>
-
-    <!-- Colored floor pads for navigation targets -->
-    <model name="red_pad">
-      <static>true</static>
-      <link name="link">
-        <visual name="visual">
-          <geometry>
-            <cylinder>
-              <radius>0.18</radius>
-              <length>0.02</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>1 0 0 1</ambient>
-            <diffuse>1 0 0 1</diffuse>
-          </material>
-        </visual>
-        <collision name="collision">
-          <geometry>
-            <cylinder>
-              <radius>0.18</radius>
-              <length>0.02</length>
-            </cylinder>
-          </geometry>
-        </collision>
-        <pose>1.5 1.5 0.01 0 0 0</pose>
-      </link>
-    </model>
-
-    <model name="blue_pad">
-      <static>true</static>
-      <link name="link">
-        <visual name="visual">
-          <geometry>
-            <cylinder>
-              <radius>0.18</radius>
-              <length>0.02</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>0 0 1 1</ambient>
-            <diffuse>0 0 1 1</diffuse>
-          </material>
-        </visual>
-        <collision name="collision">
-          <geometry>
-            <cylinder>
-              <radius>0.18</radius>
-              <length>0.02</length>
-            </cylinder>
-          </geometry>
-        </collision>
-        <pose>-1.5 1.0 0.01 0 0 0</pose>
-      </link>
-    </model>
-
-    <!-- Small yellow cylinder as another prop -->
-    <model name="yellow_marker">
-      <static>true</static>
-      <link name="link">
-        <visual name="visual">
-          <geometry>
-            <cylinder>
-              <radius>0.12</radius>
-              <length>0.25</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>1 0.9 0 1</ambient>
-            <diffuse>1 0.9 0 1</diffuse>
-          </material>
-        </visual>
-        <collision name="collision">
-          <geometry>
-            <cylinder>
-              <radius>0.12</radius>
-              <length>0.25</length>
-            </cylinder>
-          </geometry>
-        </collision>
-        <pose>-1.0 -1.5 0.125 0 0 0</pose>
       </link>
     </model>
 

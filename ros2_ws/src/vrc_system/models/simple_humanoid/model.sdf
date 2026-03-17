@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="simple_humanoid">
+    <static>false</static>
+
+    <!-- base -->
+    <link name="base">
+      <pose>0 0 0 0 0 0</pose>
+      <visual name="base_vis">
+        <geometry>
+          <box>
+            <size>0.24 0.18 0.08</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.1 0.1 0.1 1</diffuse>
+        </material>
+      </visual>
+      <collision name="base_col">
+        <geometry>
+          <box>
+            <size>0.24 0.18 0.08</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- torso -->
+    <link name="torso">
+      <pose>0 0 0.16 0 0 0</pose>
+      <visual name="torso_vis">
+        <geometry>
+          <box>
+            <size>0.20 0.18 0.18</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+        </material>
+      </visual>
+      <collision name="torso_col">
+        <geometry>
+          <box>
+            <size>0.20 0.18 0.18</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- head -->
+    <link name="head">
+      <pose>0 0 0.35 0 0 0</pose>
+      <visual name="head_vis">
+        <geometry>
+          <sphere>
+            <radius>0.10</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+        </material>
+      </visual>
+      <collision name="head_col">
+        <geometry>
+          <sphere>
+            <radius>0.10</radius>
+          </sphere>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- face plate -->
+    <link name="face">
+      <pose>0.11 0 0.35 0 0 0</pose>
+      <visual name="face_vis">
+        <geometry>
+          <box>
+            <size>0.02 0.11 0.09</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <!-- eyes -->
+    <link name="left_eye">
+      <pose>0.115 0.03 0.37 0 0 0</pose>
+      <visual name="left_eye_vis">
+        <geometry>
+          <sphere>
+            <radius>0.012</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.1 0.3 0.9 1</ambient>
+          <diffuse>0.1 0.3 0.9 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <link name="right_eye">
+      <pose>0.115 -0.03 0.37 0 0 0</pose>
+      <visual name="right_eye_vis">
+        <geometry>
+          <sphere>
+            <radius>0.012</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.1 0.3 0.9 1</ambient>
+          <diffuse>0.1 0.3 0.9 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <!-- mouth -->
+    <link name="mouth">
+      <pose>0.115 0 0.33 0 0 0</pose>
+      <visual name="mouth_vis">
+        <geometry>
+          <box>
+            <size>0.005 0.05 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.1 0.1 0.1 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <!-- arms -->
+    <link name="left_arm">
+      <pose>0 0.23 0.22 0 0 1.57</pose>
+      <visual name="left_arm_vis">
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.18</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <link name="right_arm">
+      <pose>0 -0.23 0.22 0 0 1.57</pose>
+      <visual name="right_arm_vis">
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.18</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <!-- legs -->
+    <link name="left_leg">
+      <pose>0 0.05 -0.10 0 0 0</pose>
+      <visual name="left_leg_vis">
+        <geometry>
+          <box>
+            <size>0.08 0.05 0.20</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <link name="right_leg">
+      <pose>0 -0.05 -0.10 0 0 0</pose>
+      <visual name="right_leg_vis">
+        <geometry>
+          <box>
+            <size>0.08 0.05 0.20</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <!-- simple joints (all fixed) -->
+    <joint name="base_torso" type="fixed">
+      <parent>base</parent>
+      <child>torso</child>
+    </joint>
+    <joint name="torso_head" type="fixed">
+      <parent>torso</parent>
+      <child>head</child>
+    </joint>
+    <joint name="head_face" type="fixed">
+      <parent>head</parent>
+      <child>face</child>
+    </joint>
+    <joint name="head_left_eye" type="fixed">
+      <parent>head</parent>
+      <child>left_eye</child>
+    </joint>
+    <joint name="head_right_eye" type="fixed">
+      <parent>head</parent>
+      <child>right_eye</child>
+    </joint>
+    <joint name="head_mouth" type="fixed">
+      <parent>head</parent>
+      <child>mouth</child>
+    </joint>
+    <joint name="torso_left_arm" type="fixed">
+      <parent>torso</parent>
+      <child>left_arm</child>
+    </joint>
+    <joint name="torso_right_arm" type="fixed">
+      <parent>torso</parent>
+      <child>right_arm</child>
+    </joint>
+    <joint name="base_left_leg" type="fixed">
+      <parent>base</parent>
+      <child>left_leg</child>
+    </joint>
+    <joint name="base_right_leg" type="fixed">
+      <parent>base</parent>
+      <child>right_leg</child>
+    </joint>
+
+  </model>
+</sdf>

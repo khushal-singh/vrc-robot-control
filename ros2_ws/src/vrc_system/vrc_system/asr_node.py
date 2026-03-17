@@ -16,23 +16,24 @@ class ASRNode(Node):
 
         self.subscription = self.create_subscription(
             String,
-            '/audio/raw',
+            '/audio/filepath',
             self.audio_callback,
             10
         )
 
         self.publisher = self.create_publisher(
             String,
-            '/asr/text',
+            '/voice/command',
             10
         )
 
-        self.get_logger().info('ASR node started. Waiting for /audio/raw...')
+        self.get_logger().info('ASR node started. Waiting for /audio/filepath...')
 
     def audio_callback(self, msg):
+
         wav_path = msg.data.strip()
 
-        self.get_logger().info(f"Received path: {repr(wav_path)}")
+        self.get_logger().info(f"Received path: {wav_path}")
 
         if not os.path.isfile(wav_path):
             self.get_logger().error(f'File not found: {wav_path}')
@@ -42,18 +43,19 @@ class ASRNode(Node):
 
         self.get_logger().info(f"ASR result: {result}")
 
-        if result['confidence'] >= 0.40:
+        if result['confidence'] >= 0.30:
             output = String()
             output.data = result['text']
 
             self.publisher.publish(output)
 
             self.get_logger().info(
-                f"Published to /asr/text: {result['text']}"
+                f"Published to /voice/command: {result['text']}"
             )
+
         else:
             self.get_logger().warn(
-                f"Low confidence ignored: {result['confidence']}"
+                f"Rejected low confidence: {result['confidence']}"
             )
 
 
@@ -68,11 +70,7 @@ def main(args=None):
         pass
 
     node.destroy_node()
-
-    try:
-        rclpy.shutdown()
-    except:
-        pass
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':
