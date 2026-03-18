@@ -1,0 +1,13 @@
+<sdf version="1.7">
+  <model name="first_2015_trash_can">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry><cylinder><radius>0.2</radius><length>0.6</length></cylinder></geometry>
+      </visual>
+      <collision name="collision">
+        <geometry><cylinder><radius>0.2</radius><length>0.6</length></cylinder></geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

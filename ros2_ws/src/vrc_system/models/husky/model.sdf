@@ -1,0 +1,13 @@
+<sdf version="1.7">
+  <model name="husky">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry><box><size>1.0 0.6 0.5</size></box></geometry>
+      </visual>
+      <collision name="collision">
+        <geometry><box><size>1.0 0.6 0.5</size></box></geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,13 @@
+<sdf version="1.7">
+  <model name="warehouse_robot">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry><box><size>0.7 1.0 0.5</size></box></geometry>
+      </visual>
+      <collision name="collision">
+        <geometry><box><size>0.7 1.0 0.5</size></box></geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

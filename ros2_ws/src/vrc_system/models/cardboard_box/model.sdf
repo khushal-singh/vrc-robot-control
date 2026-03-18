@@ -1,0 +1,13 @@
+<sdf version="1.7">
+  <model name="cardboard_box">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry><box><size>0.5 0.4 0.3</size></box></geometry>
+      </visual>
+      <collision name="collision">
+        <geometry><box><size>0.5 0.4 0.3</size></box></geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

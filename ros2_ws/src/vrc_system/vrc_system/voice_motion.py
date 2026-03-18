@@ -1,6 +1,4 @@
 import rclpy
-import time
-
 from rclpy.node import Node
 from std_msgs.msg import String
 from geometry_msgs.msg import Twist
@@ -22,11 +20,13 @@ class VoiceMotion(Node):
             '/cmd_vel',
             10)
 
+        self.stop_timer = None
+
         self.get_logger().info("Voice motion node started")
 
     def callback(self, msg):
 
-        text = msg.data.lower()
+        text = msg.data.lower().strip()
 
         confirm = input(f"Recognized command: '{text}'. Execute? (y/n): ")
 
@@ -35,38 +35,59 @@ class VoiceMotion(Node):
             return
 
         cmd = Twist()
-
         duration = 2.0
 
-        if "forward" in text:
-            cmd.linear.x = 0.4
+        if any(word in text for word in ["forward", "move forward", "go forward"]):
+           cmd.linear.x = 0.4
 
-        elif "backward" in text:
+        elif any(word in text for word in [
+            "backward",
+            "back",
+            "move backward",
+            "the back went",
+            "back went"
+        ]):
             cmd.linear.x = -0.4
 
-        elif "left" in text:
+        elif any(word in text for word in [
+            "left",
+            "turn left",
+            "on left"
+        ]):
             cmd.angular.z = 0.8
 
-        elif "right" in text:
+        elif any(word in text for word in [
+            "right",
+            "turn right"
+        ]):
             cmd.angular.z = -0.8
 
         elif "stop" in text:
-            cmd.linear.x = 0.0
-            cmd.angular.z = 0.0
             duration = 0.0
 
+        else:
+            self.get_logger().info(f"Unknown command: {text}")
+            return        
+        # publish motion immediately
         self.publisher.publish(cmd)
-
         self.get_logger().info(f"Published motion for: {text}")
 
-        # move for fixed duration
-        time.sleep(duration)
+        # cancel previous timer if active
+        if self.stop_timer is not None:
+            self.stop_timer.cancel()
 
-        # stop automatically
+        # create stop timer
+        if duration > 0:
+            self.stop_timer = self.create_timer(duration, self.stop_robot)
+
+    def stop_robot(self):
         stop = Twist()
         self.publisher.publish(stop)
-
         self.get_logger().info("Stopped robot")
+
+        if self.stop_timer is not None:
+            self.stop_timer.cancel()
+            self.stop_timer = None
 
 
 def main():

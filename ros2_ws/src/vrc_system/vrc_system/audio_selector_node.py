@@ -2,7 +2,6 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 import os
-import time
 
 BASE_PATH = "/mnt/d/AIS Project/vrc-robot-control/audio_dataset/clean"
 
@@ -17,47 +16,47 @@ class AudioSelectorNode(Node):
             '/audio/filepath',
             10)
 
-        self.timer = self.create_timer(1.0, self.select_audio)
+        self.run_selector()
 
-    def select_audio(self):
+    def run_selector(self):
 
-        speakers = sorted([
-            d for d in os.listdir(BASE_PATH)
-            if os.path.isdir(os.path.join(BASE_PATH, d))
-        ])
+        while rclpy.ok():
 
-        print("\nAvailable Speakers:")
-        for i, spk in enumerate(speakers):
-            print(f"{i+1}. {spk}")
+            speakers = sorted([
+                d for d in os.listdir(BASE_PATH)
+                if os.path.isdir(os.path.join(BASE_PATH, d))
+            ])
 
-        speaker_choice = int(input("\nSelect speaker number: ")) - 1
-        speaker = speakers[speaker_choice]
+            print("\nAvailable Speakers:")
+            for i, spk in enumerate(speakers):
+                print(f"{i+1}. {spk}")
 
-        speaker_path = os.path.join(BASE_PATH, speaker)
+            speaker_choice = int(input("\nSelect speaker number: ")) - 1
+            speaker = speakers[speaker_choice]
 
-        files = sorted([
-            f for f in os.listdir(speaker_path)
-            if f.endswith(".wav")
-        ])
+            speaker_path = os.path.join(BASE_PATH, speaker)
 
-        print("\nAvailable Commands:")
-        for i, f in enumerate(files):
-            print(f"{i+1}. {f}")
+            files = sorted([
+                f for f in os.listdir(speaker_path)
+                if f.endswith(".wav")
+            ])
 
-        file_choice = int(input("\nSelect command number: ")) - 1
-        selected_file = files[file_choice]
+            print("\nAvailable Commands:")
+            for i, f in enumerate(files):
+                print(f"{i+1}. {f}")
 
-        full_path = os.path.join(speaker_path, selected_file)
+            file_choice = int(input("\nSelect command number: ")) - 1
+            selected_file = files[file_choice]
 
-        msg = String()
-        msg.data = full_path
+            full_path = os.path.join(speaker_path, selected_file)
 
-        time.sleep(1)
+            msg = String()
+            msg.data = full_path
 
-        for _ in range(5):
+            # publish only once
             self.publisher_.publish(msg)
+
             self.get_logger().info(f"Published: {full_path}")
-            time.sleep(0.3)
 
 
 def main():
