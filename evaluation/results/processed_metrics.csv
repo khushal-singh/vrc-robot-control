@@ -1,16 +1,301 @@
 filename,expected,predicted,confidence,latency,correct,condition
-MoveBackward_snr0db.wav,move backward,move backward,0.418,0.48,True,0dbdB
-MoveBackward_snr10db.wav,move backward,move backward,0.308,1.36,True,10dbdB
-MoveBackward_snr20db.wav,move backward,move backward,0.345,0.96,True,20dbdB
-MoveForward_snr0db.wav,move forward,oh,0.3,1.13,False,0dbdB
-MoveForward_snr10db.wav,move forward,move forward,0.364,0.87,True,10dbdB
-MoveForward_snr20db.wav,move forward,move forward,0.387,0.3,True,20dbdB
-Stop_snr0db.wav,stop,go,0.34,0.8,False,0dbdB
-Stop_snr10db.wav,stop,stop,0.572,0.29,True,10dbdB
-Stop_snr20db.wav,stop,stop,0.377,0.31,True,20dbdB
-TurnLeft_snr0db.wav,turn left,turn left,0.368,0.31,True,0dbdB
-TurnLeft_snr10db.wav,turn left,turn left,0.377,0.3,True,10dbdB
-TurnLeft_snr20db.wav,turn left,turn left,0.373,0.3,True,20dbdB
-TurnRight_snr0db.wav,turn right,turn right,0.487,0.31,True,0dbdB
-TurnRight_snr10db.wav,turn right,turn right,0.393,0.3,True,10dbdB
-TurnRight_snr20db.wav,turn right,turn right,0.387,0.3,True,20dbdB
+Speaker_10_Movebackward_snr0db.wav,move backward,baby baby,0.285,1.45,False,0dbdB
+Speaker_10_Movebackward_snr10db.wav,move backward,with bot luck,0.237,1.08,False,10dbdB
+Speaker_10_Movebackward_snr20db.wav,move backward,lets go back up,0.273,1.13,False,20dbdB
+Speaker_10_Moveforward_snr0db.wav,move forward,with power,0.282,1.04,False,0dbdB
+Speaker_10_Moveforward_snr10db.wav,move forward,midawak,0.312,0.98,False,10dbdB
+Speaker_10_Moveforward_snr20db.wav,move forward,lets admit all one,0.298,1.02,False,20dbdB
+Speaker_10_Stop_snr0db.wav,stop,oh,0.477,0.26,False,0dbdB
+Speaker_10_Stop_snr10db.wav,stop,stop,0.359,0.87,True,10dbdB
+Speaker_10_Stop_snr20db.wav,stop,stop,0.386,0.32,True,20dbdB
+Speaker_10_Turnleft_snr0db.wav,turn left,up in the air,0.354,1.11,False,0dbdB
+Speaker_10_Turnleft_snr10db.wav,turn left,ill be right back,0.345,1.47,False,10dbdB
+Speaker_10_Turnleft_snr20db.wav,turn left,its on grip,0.372,0.41,False,20dbdB
+Speaker_10_Turnright_snr0db.wav,turn right,on life,0.312,1.1,False,0dbdB
+Speaker_10_Turnright_snr10db.wav,turn right,im right,0.401,0.4,False,10dbdB
+Speaker_10_Turnright_snr20db.wav,turn right,turn right,0.465,0.29,True,20dbdB
+Speaker_11_Movebackward_snr0db.wav,move backward,move backwards,0.381,0.29,False,0dbdB
+Speaker_11_Movebackward_snr10db.wav,move backward,lets move back with,0.375,0.3,False,10dbdB
+Speaker_11_Movebackward_snr20db.wav,move backward,move back with,0.441,0.28,False,20dbdB
+Speaker_11_Moveforward_snr0db.wav,move forward,this is a new part of it,0.326,1.17,False,0dbdB
+Speaker_11_Moveforward_snr10db.wav,move forward,move on with,0.505,0.29,False,10dbdB
+Speaker_11_Moveforward_snr20db.wav,move forward,move on with,0.441,0.29,False,20dbdB
+Speaker_11_Stop_snr0db.wav,stop,oh,0.518,0.27,False,0dbdB
+Speaker_11_Stop_snr10db.wav,stop,so,0.333,1.66,False,10dbdB
+Speaker_11_Stop_snr20db.wav,stop,stop,0.406,0.27,True,20dbdB
+Speaker_11_Turnleft_snr0db.wav,turn left,turn left,0.353,0.96,True,0dbdB
+Speaker_11_Turnleft_snr10db.wav,turn left,turn left,0.358,0.9,True,10dbdB
+Speaker_11_Turnleft_snr20db.wav,turn left,turn left,0.444,0.28,True,20dbdB
+Speaker_11_Turnright_snr0db.wav,turn right,in life,0.284,1.21,False,0dbdB
+Speaker_11_Turnright_snr10db.wav,turn right,right,0.352,1.11,False,10dbdB
+Speaker_11_Turnright_snr20db.wav,turn right,turn right,0.387,0.28,True,20dbdB
+Speaker_12_Movebackward_snr0db.wav,move backward,move backwards,0.49,0.32,False,0dbdB
+Speaker_12_Movebackward_snr10db.wav,move backward,move back with,0.58,0.29,False,10dbdB
+Speaker_12_Movebackward_snr20db.wav,move backward,move back with,0.523,0.28,False,20dbdB
+Speaker_12_Moveforward_snr0db.wav,move forward,move far away,0.418,0.3,False,0dbdB
+Speaker_12_Moveforward_snr10db.wav,move forward,move on with,0.451,0.29,False,10dbdB
+Speaker_12_Moveforward_snr20db.wav,move forward,move on with,0.395,0.3,False,20dbdB
+Speaker_12_Stop_snr0db.wav,stop,oh,0.35,2.34,False,0dbdB
+Speaker_12_Stop_snr10db.wav,stop,so,0.297,0.91,False,10dbdB
+Speaker_12_Stop_snr20db.wav,stop,so,0.343,1.13,False,20dbdB
+Speaker_12_Turnleft_snr0db.wav,turn left,only,0.323,1.01,False,0dbdB
+Speaker_12_Turnleft_snr10db.wav,turn left,so lets go and rip,0.277,1.43,False,10dbdB
+Speaker_12_Turnleft_snr20db.wav,turn left,turn left,0.315,1.08,True,20dbdB
+Speaker_12_Turnright_snr0db.wav,turn right,and life,0.325,0.93,False,0dbdB
+Speaker_12_Turnright_snr10db.wav,turn right,turn right,0.394,0.33,True,10dbdB
+Speaker_12_Turnright_snr20db.wav,turn right,turn right,0.513,0.29,True,20dbdB
+Speaker_13_Movebackward_snr0db.wav,move backward,im a bot with,0.29,2.23,False,0dbdB
+Speaker_13_Movebackward_snr10db.wav,move backward,im a part with,0.262,2.24,False,10dbdB
+Speaker_13_Movebackward_snr20db.wav,move backward,ill go back with,0.328,1.1,False,20dbdB
+Speaker_13_Moveforward_snr0db.wav,move forward,im out of my mind,0.307,1.29,False,0dbdB
+Speaker_13_Moveforward_snr10db.wav,move forward,moot with,0.281,3.51,False,10dbdB
+Speaker_13_Moveforward_snr20db.wav,move forward,moaunt with,0.306,5.37,False,20dbdB
+Speaker_13_Stop_snr0db.wav,stop,oh,0.475,0.27,False,0dbdB
+Speaker_13_Stop_snr10db.wav,stop,stop,0.335,0.99,True,10dbdB
+Speaker_13_Stop_snr20db.wav,stop,stop,0.443,0.35,True,20dbdB
+Speaker_13_Turnleft_snr0db.wav,turn left,certainly,0.341,1.11,False,0dbdB
+Speaker_13_Turnleft_snr10db.wav,turn left,im going to read,0.288,1.07,False,10dbdB
+Speaker_13_Turnleft_snr20db.wav,turn left,its been ripped,0.272,1.02,False,20dbdB
+Speaker_13_Turnright_snr0db.wav,turn right,turn light,0.34,1.12,False,0dbdB
+Speaker_13_Turnright_snr10db.wav,turn right,and light,0.332,0.93,False,10dbdB
+Speaker_13_Turnright_snr20db.wav,turn right,and light,0.322,0.98,False,20dbdB
+Speaker_14_Movebackward_snr0db.wav,move backward,well talk with,0.375,0.33,False,0dbdB
+Speaker_14_Movebackward_snr10db.wav,move backward,new partner,0.303,1.1,False,10dbdB
+Speaker_14_Movebackward_snr20db.wav,move backward,well back with,0.331,0.96,False,20dbdB
+Speaker_14_Moveforward_snr0db.wav,move forward,well part with it,0.328,1.25,False,0dbdB
+Speaker_14_Moveforward_snr10db.wav,move forward,move forward,0.345,1.28,True,10dbdB
+Speaker_14_Moveforward_snr20db.wav,move forward,move forward,0.402,0.35,True,20dbdB
+Speaker_14_Stop_snr0db.wav,stop,oh,0.417,0.3,False,0dbdB
+Speaker_14_Stop_snr10db.wav,stop,so,0.305,1.01,False,10dbdB
+Speaker_14_Stop_snr20db.wav,stop,stop,0.343,0.89,True,20dbdB
+Speaker_14_Turnleft_snr0db.wav,turn left,so lets go to the left,0.359,1.16,False,0dbdB
+Speaker_14_Turnleft_snr10db.wav,turn left,so im left,0.296,1.1,False,10dbdB
+Speaker_14_Turnleft_snr20db.wav,turn left,turn left,0.359,0.96,True,20dbdB
+Speaker_14_Turnright_snr0db.wav,turn right,and life,0.318,1.27,False,0dbdB
+Speaker_14_Turnright_snr10db.wav,turn right,turn right,0.42,0.31,True,10dbdB
+Speaker_14_Turnright_snr20db.wav,turn right,turn right,0.459,0.31,True,20dbdB
+Speaker_15_Movebackward_snr0db.wav,move backward,well talk with,0.375,0.34,False,0dbdB
+Speaker_15_Movebackward_snr10db.wav,move backward,well pop with,0.312,1.2,False,10dbdB
+Speaker_15_Movebackward_snr20db.wav,move backward,well back with,0.331,1.5,False,20dbdB
+Speaker_15_Moveforward_snr0db.wav,move forward,well part with it,0.328,1.17,False,0dbdB
+Speaker_15_Moveforward_snr10db.wav,move forward,move forward,0.345,1.03,True,10dbdB
+Speaker_15_Moveforward_snr20db.wav,move forward,move forward,0.402,0.32,True,20dbdB
+Speaker_15_Stop_snr0db.wav,stop,oh,0.417,0.31,False,0dbdB
+Speaker_15_Stop_snr10db.wav,stop,so,0.305,1.06,False,10dbdB
+Speaker_15_Stop_snr20db.wav,stop,stop,0.343,1.25,True,20dbdB
+Speaker_15_Turnleft_snr0db.wav,turn left,so lets go to the left,0.359,1.12,False,0dbdB
+Speaker_15_Turnleft_snr10db.wav,turn left,so im left,0.296,1.03,False,10dbdB
+Speaker_15_Turnleft_snr20db.wav,turn left,turn left,0.359,1.04,True,20dbdB
+Speaker_15_Turnright_snr0db.wav,turn right,and life,0.318,1.33,False,0dbdB
+Speaker_15_Turnright_snr10db.wav,turn right,turn right,0.42,0.43,True,10dbdB
+Speaker_15_Turnright_snr20db.wav,turn right,turn right,0.459,0.34,True,20dbdB
+Speaker_16_Movebackward_snr0db.wav,move backward,move back with,0.446,0.33,False,0dbdB
+Speaker_16_Movebackward_snr10db.wav,move backward,move back with,0.507,0.32,False,10dbdB
+Speaker_16_Movebackward_snr20db.wav,move backward,move back with,0.515,0.34,False,20dbdB
+Speaker_16_Moveforward_snr0db.wav,move forward,move forward with,0.391,0.33,False,0dbdB
+Speaker_16_Moveforward_snr10db.wav,move forward,or with,0.495,0.33,False,10dbdB
+Speaker_16_Moveforward_snr20db.wav,move forward,move forward,0.407,0.31,True,20dbdB
+Speaker_16_Stop_snr0db.wav,stop,oh,0.421,0.3,False,0dbdB
+Speaker_16_Stop_snr10db.wav,stop,so,0.328,1.25,False,10dbdB
+Speaker_16_Stop_snr20db.wav,stop,stop,0.388,0.31,True,20dbdB
+Speaker_16_Turnleft_snr0db.wav,turn left,i cant believe it,0.308,1.03,False,0dbdB
+Speaker_16_Turnleft_snr10db.wav,turn left,andre,0.407,0.33,False,10dbdB
+Speaker_16_Turnleft_snr20db.wav,turn left,its on the lift,0.435,0.34,False,20dbdB
+Speaker_16_Turnright_snr0db.wav,turn right,online,0.376,0.31,False,0dbdB
+Speaker_16_Turnright_snr10db.wav,turn right,online,0.38,0.32,False,10dbdB
+Speaker_16_Turnright_snr20db.wav,turn right,its on right,0.372,0.33,False,20dbdB
+Speaker_17_Movebackward_snr0db.wav,move backward,im a newbie im a newbie,0.292,1.27,False,0dbdB
+Speaker_17_Movebackward_snr10db.wav,move backward,well pop with,0.317,1.66,False,10dbdB
+Speaker_17_Movebackward_snr20db.wav,move backward,well back with,0.329,2.32,False,20dbdB
+Speaker_17_Moveforward_snr0db.wav,move forward,im going to fall in it,0.283,2.28,False,0dbdB
+Speaker_17_Moveforward_snr10db.wav,move forward,ill move on with it,0.315,1.29,False,10dbdB
+Speaker_17_Moveforward_snr20db.wav,move forward,move forward,0.408,0.33,True,20dbdB
+Speaker_17_Stop_snr0db.wav,stop,oh,0.417,0.34,False,0dbdB
+Speaker_17_Stop_snr10db.wav,stop,oh,0.36,0.95,False,10dbdB
+Speaker_17_Stop_snr20db.wav,stop,its all up,0.34,0.98,False,20dbdB
+Speaker_17_Turnleft_snr0db.wav,turn left,dont blend,0.381,0.38,False,0dbdB
+Speaker_17_Turnleft_snr10db.wav,turn left,dont lift,0.45,0.43,False,10dbdB
+Speaker_17_Turnleft_snr20db.wav,turn left,dont lift,0.57,0.38,False,20dbdB
+Speaker_17_Turnright_snr0db.wav,turn right,dont lie,0.434,0.4,False,0dbdB
+Speaker_17_Turnright_snr10db.wav,turn right,dont like,0.503,0.4,False,10dbdB
+Speaker_17_Turnright_snr20db.wav,turn right,dont write,0.535,0.36,False,20dbdB
+Speaker_18_Movebackward_snr0db.wav,move backward,im gonna pop with,0.323,1.1,False,0dbdB
+Speaker_18_Movebackward_snr10db.wav,move backward,new pocket,0.359,1.09,False,10dbdB
+Speaker_18_Movebackward_snr20db.wav,move backward,move back with,0.407,0.33,False,20dbdB
+Speaker_18_Moveforward_snr0db.wav,move forward,im gonna call it,0.303,1.12,False,0dbdB
+Speaker_18_Moveforward_snr10db.wav,move forward,loop all at,0.319,1.01,False,10dbdB
+Speaker_18_Moveforward_snr20db.wav,move forward,move forward,0.43,0.33,True,20dbdB
+Speaker_18_Stop_snr0db.wav,stop,oh,0.427,0.31,False,0dbdB
+Speaker_18_Stop_snr10db.wav,stop,stop,0.34,0.99,True,10dbdB
+Speaker_18_Stop_snr20db.wav,stop,top,0.299,1.01,False,20dbdB
+Speaker_18_Turnleft_snr0db.wav,turn left,im gonna go in there,0.326,1.32,False,0dbdB
+Speaker_18_Turnleft_snr10db.wav,turn left,so indepth,0.303,1.33,False,10dbdB
+Speaker_18_Turnleft_snr20db.wav,turn left,turn left,0.343,1.03,True,20dbdB
+Speaker_18_Turnright_snr0db.wav,turn right,in life,0.33,0.97,False,0dbdB
+Speaker_18_Turnright_snr10db.wav,turn right,right,0.439,0.32,False,10dbdB
+Speaker_18_Turnright_snr20db.wav,turn right,turn right,0.503,0.32,True,20dbdB
+Speaker_19_Movebackward_snr0db.wav,move backward,well move forward,0.325,1.23,False,0dbdB
+Speaker_19_Movebackward_snr10db.wav,move backward,well pop with,0.301,1.54,False,10dbdB
+Speaker_19_Movebackward_snr20db.wav,move backward,blue pocket,0.326,1.17,False,20dbdB
+Speaker_19_Moveforward_snr0db.wav,move forward,im going to fall with it,0.329,1.48,False,0dbdB
+Speaker_19_Moveforward_snr10db.wav,move forward,you lose all of it,0.317,1.44,False,10dbdB
+Speaker_19_Moveforward_snr20db.wav,move forward,well move forward,0.379,0.41,False,20dbdB
+Speaker_19_Stop_snr0db.wav,stop,lets go,0.408,0.41,False,0dbdB
+Speaker_19_Stop_snr10db.wav,stop,oh,0.475,0.32,False,10dbdB
+Speaker_19_Stop_snr20db.wav,stop,stop,0.399,0.32,True,20dbdB
+Speaker_19_Turnleft_snr0db.wav,turn left,dont let them,0.319,1.13,False,0dbdB
+Speaker_19_Turnleft_snr10db.wav,turn left,dont drift,0.402,0.33,False,10dbdB
+Speaker_19_Turnleft_snr20db.wav,turn left,dont lift,0.469,0.33,False,20dbdB
+Speaker_19_Turnright_snr0db.wav,turn right,dont like it,0.44,0.34,False,0dbdB
+Speaker_19_Turnright_snr10db.wav,turn right,dont write,0.453,0.33,False,10dbdB
+Speaker_19_Turnright_snr20db.wav,turn right,turn right,0.482,0.32,True,20dbdB
+Speaker_1_MoveBackward_snr0db.wav,move backward,move backward,0.418,0.37,True,0dbdB
+Speaker_1_MoveBackward_snr10db.wav,move backward,move backward,0.38,0.62,True,10dbdB
+Speaker_1_MoveBackward_snr20db.wav,move backward,move backward,0.345,0.97,True,20dbdB
+Speaker_1_MoveForward_snr0db.wav,move forward,move forward,0.315,1.19,True,0dbdB
+Speaker_1_MoveForward_snr10db.wav,move forward,move forward,0.364,0.98,True,10dbdB
+Speaker_1_MoveForward_snr20db.wav,move forward,move forward,0.387,0.33,True,20dbdB
+Speaker_1_Stop_snr0db.wav,stop,go,0.34,1.19,False,0dbdB
+Speaker_1_Stop_snr10db.wav,stop,stop,0.572,0.37,True,10dbdB
+Speaker_1_Stop_snr20db.wav,stop,stop,0.377,0.39,True,20dbdB
+Speaker_1_TurnLeft_snr0db.wav,turn left,turn left,0.368,0.41,True,0dbdB
+Speaker_1_TurnLeft_snr10db.wav,turn left,turn left,0.377,0.34,True,10dbdB
+Speaker_1_TurnLeft_snr20db.wav,turn left,turn left,0.373,0.33,True,20dbdB
+Speaker_1_TurnRight_snr0db.wav,turn right,turn right,0.487,0.34,True,0dbdB
+Speaker_1_TurnRight_snr10db.wav,turn right,turn right,0.393,0.35,True,10dbdB
+Speaker_1_TurnRight_snr20db.wav,turn right,turn right,0.387,0.34,True,20dbdB
+Speaker_20_Movebackward_snr0db.wav,move backward,ive been packed with,0.312,1.1,False,0dbdB
+Speaker_20_Movebackward_snr10db.wav,move backward,move back with,0.338,0.96,False,10dbdB
+Speaker_20_Movebackward_snr20db.wav,move backward,move back with,0.308,0.97,False,20dbdB
+Speaker_20_Moveforward_snr0db.wav,move forward,ive been caught with,0.333,2.53,False,0dbdB
+Speaker_20_Moveforward_snr10db.wav,move forward,move on with,0.459,0.33,False,10dbdB
+Speaker_20_Moveforward_snr20db.wav,move forward,loop on with,0.41,0.33,False,20dbdB
+Speaker_20_Stop_snr0db.wav,stop,oh,0.379,0.32,False,0dbdB
+Speaker_20_Stop_snr10db.wav,stop,so,0.332,2.05,False,10dbdB
+Speaker_20_Stop_snr20db.wav,stop,stop,0.395,0.33,True,20dbdB
+Speaker_20_Turnleft_snr0db.wav,turn left,so lets go to the left,0.305,1.17,False,0dbdB
+Speaker_20_Turnleft_snr10db.wav,turn left,and then,0.257,1.13,False,10dbdB
+Speaker_20_Turnleft_snr20db.wav,turn left,turn left,0.368,0.33,True,20dbdB
+Speaker_20_Turnright_snr0db.wav,turn right,i dont like it,0.354,1.21,False,0dbdB
+Speaker_20_Turnright_snr10db.wav,turn right,turn right,0.427,0.32,True,10dbdB
+Speaker_20_Turnright_snr20db.wav,turn right,turn right,0.445,0.32,True,20dbdB
+Speaker_2_MoveBackward_snr0db.wav,move backward,move backwards,0.393,0.34,False,0dbdB
+Speaker_2_MoveBackward_snr10db.wav,move backward,move backward,0.441,0.34,True,10dbdB
+Speaker_2_MoveBackward_snr20db.wav,move backward,move backward,0.469,0.33,True,20dbdB
+Speaker_2_MoveForward_snr0db.wav,move forward,no power,0.346,1.59,False,0dbdB
+Speaker_2_MoveForward_snr10db.wav,move forward,no power,0.369,0.69,False,10dbdB
+Speaker_2_MoveForward_snr20db.wav,move forward,move forward,0.395,0.36,True,20dbdB
+Speaker_2_Stop_snr0db.wav,stop,stop,0.298,1.13,True,0dbdB
+Speaker_2_Stop_snr10db.wav,stop,stop,0.385,0.41,True,10dbdB
+Speaker_2_Stop_snr20db.wav,stop,its stopped,0.387,0.98,False,20dbdB
+Speaker_2_TurnLeft_snr0db.wav,turn left,turn left,0.449,0.33,True,0dbdB
+Speaker_2_TurnLeft_snr10db.wav,turn left,turn left,0.618,0.34,True,10dbdB
+Speaker_2_TurnLeft_snr20db.wav,turn left,turn left,0.65,0.33,True,20dbdB
+Speaker_2_TurnRight_snr0db.wav,turn right,turn right,0.417,0.34,True,0dbdB
+Speaker_2_TurnRight_snr10db.wav,turn right,turn right,0.473,0.34,True,10dbdB
+Speaker_2_TurnRight_snr20db.wav,turn right,turn right,0.5,0.33,True,20dbdB
+Speaker_3_MoveBackward_snr0db.wav,move backward,new backboard,0.263,1.09,False,0dbdB
+Speaker_3_MoveBackward_snr10db.wav,move backward,new backbone,0.343,3.03,False,10dbdB
+Speaker_3_MoveBackward_snr20db.wav,move backward,move back bone,0.381,0.35,False,20dbdB
+Speaker_3_MoveForward_snr0db.wav,move forward,move forward,0.481,0.33,True,0dbdB
+Speaker_3_MoveForward_snr10db.wav,move forward,move forward,0.534,0.33,True,10dbdB
+Speaker_3_MoveForward_snr20db.wav,move forward,move forward,0.426,0.33,True,20dbdB
+Speaker_3_Stop_snr0db.wav,stop,stop,0.424,0.37,True,0dbdB
+Speaker_3_Stop_snr10db.wav,stop,stop,0.409,0.4,True,10dbdB
+Speaker_3_Stop_snr20db.wav,stop,stop,0.437,0.37,True,20dbdB
+Speaker_3_TurnLeft_snr0db.wav,turn left,turn left,0.344,1.15,True,0dbdB
+Speaker_3_TurnLeft_snr10db.wav,turn left,turn left,0.376,0.32,True,10dbdB
+Speaker_3_TurnLeft_snr20db.wav,turn left,dont lift,0.342,0.99,False,20dbdB
+Speaker_3_TurnRight_snr0db.wav,turn right,dont write,0.401,0.34,False,0dbdB
+Speaker_3_TurnRight_snr10db.wav,turn right,turn right,0.54,0.33,True,10dbdB
+Speaker_3_TurnRight_snr20db.wav,turn right,turn right,0.497,0.33,True,20dbdB
+Speaker_4_MoveBackward_snr0db.wav,move backward,well pop with it,0.337,1.12,False,0dbdB
+Speaker_4_MoveBackward_snr10db.wav,move backward,well back with,0.313,1.09,False,10dbdB
+Speaker_4_MoveBackward_snr20db.wav,move backward,and move backwards,0.346,1.06,False,20dbdB
+Speaker_4_MoveForward_snr0db.wav,move forward,you live all life,0.292,1.28,False,0dbdB
+Speaker_4_MoveForward_snr10db.wav,move forward,and move forward,0.296,1.07,False,10dbdB
+Speaker_4_MoveForward_snr20db.wav,move forward,move forward,0.42,0.38,True,20dbdB
+Speaker_4_Stop_snr0db.wav,stop,oh,0.424,0.41,False,0dbdB
+Speaker_4_Stop_snr10db.wav,stop,stop,0.314,1.19,True,10dbdB
+Speaker_4_Stop_snr20db.wav,stop,stop,0.351,0.96,True,20dbdB
+Speaker_4_TurnLeft_snr0db.wav,turn left,so lets go to the left,0.369,0.58,False,0dbdB
+Speaker_4_TurnLeft_snr10db.wav,turn left,so lets go to the left,0.291,1.38,False,10dbdB
+Speaker_4_TurnLeft_snr20db.wav,turn left,to the left,0.446,0.33,False,20dbdB
+Speaker_4_TurnRight_snr0db.wav,turn right,in life,0.314,1.08,False,0dbdB
+Speaker_4_TurnRight_snr10db.wav,turn right,turn right,0.466,0.33,True,10dbdB
+Speaker_4_TurnRight_snr20db.wav,turn right,turn right,0.428,0.32,True,20dbdB
+Speaker_5_MoveBackward_snr0db.wav,move backward,what the hell is going on,0.308,1.21,False,0dbdB
+Speaker_5_MoveBackward_snr10db.wav,move backward,well pop with it,0.31,2.47,False,10dbdB
+Speaker_5_MoveBackward_snr20db.wav,move backward,well park with,0.308,1.25,False,20dbdB
+Speaker_5_MoveForward_snr0db.wav,move forward,im going to call the,0.288,1.27,False,0dbdB
+Speaker_5_MoveForward_snr10db.wav,move forward,loop on with,0.307,1.1,False,10dbdB
+Speaker_5_MoveForward_snr20db.wav,move forward,blue forward,0.333,1.0,False,20dbdB
+Speaker_5_Stop_snr0db.wav,stop,oh,0.485,0.33,False,0dbdB
+Speaker_5_Stop_snr10db.wav,stop,oh,0.345,1.22,False,10dbdB
+Speaker_5_Stop_snr20db.wav,stop,stop,0.382,0.36,True,20dbdB
+Speaker_5_TurnLeft_snr0db.wav,turn left,im doing that,0.344,1.35,False,0dbdB
+Speaker_5_TurnLeft_snr10db.wav,turn left,dont dream,0.32,1.33,False,10dbdB
+Speaker_5_TurnLeft_snr20db.wav,turn left,dont lift,0.486,0.33,False,20dbdB
+Speaker_5_TurnRight_snr0db.wav,turn right,dont like it,0.382,0.34,False,0dbdB
+Speaker_5_TurnRight_snr10db.wav,turn right,dont lie,0.441,0.42,False,10dbdB
+Speaker_5_TurnRight_snr20db.wav,turn right,turn right,0.47,0.52,True,20dbdB
+Speaker_6_MoveBackward_snr0db.wav,move backward,im in popup,0.339,1.53,False,0dbdB
+Speaker_6_MoveBackward_snr10db.wav,move backward,well pop with,0.345,1.13,False,10dbdB
+Speaker_6_MoveBackward_snr20db.wav,move backward,blue pocket,0.298,1.04,False,20dbdB
+Speaker_6_MoveForward_snr0db.wav,move forward,im in port west,0.329,1.17,False,0dbdB
+Speaker_6_MoveForward_snr10db.wav,move forward,a new portlet,0.275,1.11,False,10dbdB
+Speaker_6_MoveForward_snr20db.wav,move forward,loop forward,0.422,0.33,False,20dbdB
+Speaker_6_Stop_snr0db.wav,stop,oh,0.411,0.32,False,0dbdB
+Speaker_6_Stop_snr10db.wav,stop,stop,0.348,0.93,True,10dbdB
+Speaker_6_Stop_snr20db.wav,stop,top,0.381,0.31,False,20dbdB
+Speaker_6_TurnLeft_snr0db.wav,turn left,so lets go to the left,0.344,1.43,False,0dbdB
+Speaker_6_TurnLeft_snr10db.wav,turn left,turn left,0.403,0.35,True,10dbdB
+Speaker_6_TurnLeft_snr20db.wav,turn left,turn left,0.391,0.46,True,20dbdB
+Speaker_6_TurnRight_snr0db.wav,turn right,in life,0.326,1.31,False,0dbdB
+Speaker_6_TurnRight_snr10db.wav,turn right,im going right,0.32,1.28,False,10dbdB
+Speaker_6_TurnRight_snr20db.wav,turn right,turn right,0.484,0.34,True,20dbdB
+Speaker_7_MoveBackward_snr0db.wav,move backward,im in luck with it,0.328,1.33,False,0dbdB
+Speaker_7_MoveBackward_snr10db.wav,move backward,loop back with,0.43,0.34,False,10dbdB
+Speaker_7_MoveBackward_snr20db.wav,move backward,loop back with,0.548,0.35,False,20dbdB
+Speaker_7_MoveForward_snr0db.wav,move forward,im in court with it,0.314,1.18,False,0dbdB
+Speaker_7_MoveForward_snr10db.wav,move forward,loop or lift,0.397,0.33,False,10dbdB
+Speaker_7_MoveForward_snr20db.wav,move forward,loop forward,0.438,0.34,False,20dbdB
+Speaker_7_Stop_snr0db.wav,stop,oh,0.397,0.33,False,0dbdB
+Speaker_7_Stop_snr10db.wav,stop,,0.0,0.32,False,10dbdB
+Speaker_7_Stop_snr20db.wav,stop,its up,0.32,1.32,False,20dbdB
+Speaker_7_TurnLeft_snr0db.wav,turn left,and then,0.254,1.1,False,0dbdB
+Speaker_7_TurnLeft_snr10db.wav,turn left,and then,0.303,1.23,False,10dbdB
+Speaker_7_TurnLeft_snr20db.wav,turn left,dont lift,0.455,0.42,False,20dbdB
+Speaker_7_TurnRight_snr0db.wav,turn right,good night,0.35,1.15,False,0dbdB
+Speaker_7_TurnRight_snr10db.wav,turn right,turn right,0.434,0.33,True,10dbdB
+Speaker_7_TurnRight_snr20db.wav,turn right,turn right,0.453,0.33,True,20dbdB
+Speaker_8_MoveBackward_snr0db.wav,move backward,im going to pop with it,0.309,1.22,False,0dbdB
+Speaker_8_MoveBackward_snr10db.wav,move backward,,0.0,0.36,False,10dbdB
+Speaker_8_MoveBackward_snr20db.wav,move backward,well park with,0.331,1.78,False,20dbdB
+Speaker_8_MoveForward_snr0db.wav,move forward,im in court with,0.305,1.34,False,0dbdB
+Speaker_8_MoveForward_snr10db.wav,move forward,loop on with,0.379,0.33,False,10dbdB
+Speaker_8_MoveForward_snr20db.wav,move forward,loop on with,0.345,0.99,False,20dbdB
+Speaker_8_Stop_snr0db.wav,stop,,0.0,0.34,False,0dbdB
+Speaker_8_Stop_snr10db.wav,stop,,0.0,0.34,False,10dbdB
+Speaker_8_Stop_snr20db.wav,stop,so,0.33,1.7,False,20dbdB
+Speaker_8_TurnLeft_snr0db.wav,turn left,good luck,0.319,1.23,False,0dbdB
+Speaker_8_TurnLeft_snr10db.wav,turn left,dont lift,0.51,0.35,False,10dbdB
+Speaker_8_TurnLeft_snr20db.wav,turn left,dont lift,0.548,0.34,False,20dbdB
+Speaker_8_TurnRight_snr0db.wav,turn right,good night,0.402,0.35,False,0dbdB
+Speaker_8_TurnRight_snr10db.wav,turn right,dont like,0.475,0.35,False,10dbdB
+Speaker_8_TurnRight_snr20db.wav,turn right,dont light,0.436,0.33,False,20dbdB
+Speaker_9_Movebackward_snr0db.wav,move backward,move backwards,0.482,0.35,False,0dbdB
+Speaker_9_Movebackward_snr10db.wav,move backward,move backward,0.519,0.32,True,10dbdB
+Speaker_9_Movebackward_snr20db.wav,move backward,move backward,0.557,0.33,True,20dbdB
+Speaker_9_Moveforward_snr0db.wav,move forward,move forward,0.429,0.33,True,0dbdB
+Speaker_9_Moveforward_snr10db.wav,move forward,move forward,0.443,0.33,True,10dbdB
+Speaker_9_Moveforward_snr20db.wav,move forward,move forward,0.485,0.32,True,20dbdB
+Speaker_9_Stop_snr0db.wav,stop,stop,0.341,0.92,True,0dbdB
+Speaker_9_Stop_snr10db.wav,stop,stop,0.341,0.96,True,10dbdB
+Speaker_9_Stop_snr20db.wav,stop,lets start,0.394,0.34,False,20dbdB
+Speaker_9_Turnleft_snr0db.wav,turn left,turn left,0.492,0.33,True,0dbdB
+Speaker_9_Turnleft_snr10db.wav,turn left,turn left,0.483,0.33,True,10dbdB
+Speaker_9_Turnleft_snr20db.wav,turn left,turn left,0.472,0.33,True,20dbdB
+Speaker_9_Turnright_snr0db.wav,turn right,turn right,0.332,1.23,True,0dbdB
+Speaker_9_Turnright_snr10db.wav,turn right,turn right,0.423,0.37,True,10dbdB
+Speaker_9_Turnright_snr20db.wav,turn right,turn right,0.516,0.4,True,20dbdB

@@ -6,6 +6,12 @@ def mix_noise(clean_path, noise_path, output_path, snr_db):
     clean, sr = sf.read(clean_path)
     noise, _ = sf.read(noise_path)
 
+    # Convert to mono if stereo
+    if len(clean.shape) > 1:
+        clean = clean.mean(axis=1)
+    if len(noise.shape) > 1:
+        noise = noise.mean(axis=1)
+
     if len(noise) < len(clean):
         noise = np.tile(noise, int(np.ceil(len(clean) / len(noise))))
     noise = noise[:len(clean)]
@@ -22,13 +28,17 @@ def mix_noise(clean_path, noise_path, output_path, snr_db):
 
 def augment_dataset(clean_dir, noise_file, output_dir, snr_levels=[20, 10, 0]):
     os.makedirs(output_dir, exist_ok=True)
-    for fname in os.listdir(clean_dir):
-        if fname.endswith(".wav"):
-            clean_path = os.path.join(clean_dir, fname)
-            for snr in snr_levels:
-                out_name = fname.replace(".wav", f"_snr{snr}db.wav")
-                out_path = os.path.join(output_dir, out_name)
-                mix_noise(clean_path, noise_file, out_path, snr)
+    for speaker in sorted(os.listdir(clean_dir)):
+        speaker_path = os.path.join(clean_dir, speaker)
+        if not os.path.isdir(speaker_path):
+            continue
+        for fname in sorted(os.listdir(speaker_path)):
+            if fname.endswith(".wav"):
+                clean_path = os.path.join(speaker_path, fname)
+                for snr in snr_levels:
+                    out_name = f"{speaker}_{fname.replace('.wav', '')}_snr{snr}db.wav"
+                    out_path = os.path.join(output_dir, out_name)
+                    mix_noise(clean_path, noise_file, out_path, snr)
 
 if __name__ == "__main__":
     augment_dataset(

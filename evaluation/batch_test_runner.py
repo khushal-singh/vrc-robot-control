@@ -13,7 +13,12 @@ COMMAND_MAP = {
 }
 
 def get_expected(filename):
-    base = filename.split("_snr")[0].split("_speaker")[0]
+    # filename format: Speaker_1_MoveForward_snr20db.wav
+    # strip speaker prefix first
+    parts = filename.split("_")
+    # find where the command starts (after "Speaker" and the number)
+    command_part = "_".join(parts[2:])  # e.g. "MoveForward_snr20db.wav"
+    base = command_part.split("_snr")[0]  # e.g. "MoveForward"
     return COMMAND_MAP.get(base.lower(), base.lower())
 
 def run_batch(audio_dir, output_csv):
