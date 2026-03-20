@@ -1,0 +1,21 @@
+filename,asr_text,confidence,intent,false_activation
+oov_01.wav,the weather is nice today,0.741,NO_COMMAND,False
+oov_02.wav,please open the door,0.706,NO_COMMAND,False
+oov_03.wav,hello how are you,0.665,NO_COMMAND,False
+oov_04.wav,what time is it,0.703,NO_COMMAND,False
+oov_05.wav,i need some water,0.663,NO_COMMAND,False
+oov_06.wav,the robot is interesting,0.678,NO_COMMAND,False
+oov_07.wav,can you hear me,0.741,NO_COMMAND,False
+oov_08.wav,this is a test sentence,0.686,NO_COMMAND,False
+oov_09.wav,frankfurt on main is a city,0.742,NO_COMMAND,False
+oov_10.wav,artificial intelligence is advancing,0.715,NO_COMMAND,False
+oov_11.wav,i would like some coffee,0.729,NO_COMMAND,False
+oov_12.wav,the meeting starts at 9,0.707,NO_COMMAND,False
+oov_13.wav,please close the window,0.635,NO_COMMAND,False
+oov_14.wav,where is the nearest station,0.743,NO_COMMAND,False
+oov_15.wav,thank you very much,0.69,NO_COMMAND,False
+oov_16.wav,good morning everyone,0.602,NO_COMMAND,False
+oov_17.wav,the project is almost done,0.691,NO_COMMAND,False
+oov_18.wav,i am going to the lab,0.772,NO_COMMAND,False
+oov_19.wav,machine learning is fascinating,0.644,NO_COMMAND,False
+oov_20.wav,let me check the schedule,0.678,NO_COMMAND,False

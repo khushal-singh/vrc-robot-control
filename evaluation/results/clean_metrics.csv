@@ -1,0 +1,101 @@
+filename,speaker,condition,expected,predicted,correct,confidence,latency_s
+speaker10_MoveBackward.wav,speaker10,clean,move backward,move backward,True,0.58,1.35
+speaker10_MoveForward.wav,speaker10,clean,move forward,move forward,True,0.624,1.4
+speaker10_Stop.wav,speaker10,clean,stop,stop,True,0.453,1.51
+speaker10_TurnLeft.wav,speaker10,clean,turn left,turn left,True,0.542,1.67
+speaker10_TurnRight.wav,speaker10,clean,turn right,turn right,True,0.548,1.41
+speaker11_MoveBackward.wav,speaker11,clean,move backward,move backward,True,0.615,1.31
+speaker11_MoveForward.wav,speaker11,clean,move forward,move forward,True,0.725,1.33
+speaker11_Stop.wav,speaker11,clean,stop,stop,True,0.425,1.36
+speaker11_TurnLeft.wav,speaker11,clean,turn left,turn left,True,0.562,1.36
+speaker11_TurnRight.wav,speaker11,clean,turn right,turn right,True,0.512,1.61
+speaker12_MoveBackward.wav,speaker12,clean,move backward,move backward,True,0.582,1.55
+speaker12_MoveForward.wav,speaker12,clean,move forward,move forward,True,0.631,1.52
+speaker12_Stop.wav,speaker12,clean,stop,stop,True,0.461,1.29
+speaker12_TurnLeft.wav,speaker12,clean,turn left,turn left,True,0.538,1.32
+speaker12_TurnRight.wav,speaker12,clean,turn right,turn right,True,0.622,1.31
+speaker13_MoveBackward.wav,speaker13,clean,move backward,move backward,True,0.592,1.36
+speaker13_MoveForward.wav,speaker13,clean,move forward,move forward,True,0.612,1.31
+speaker13_Stop.wav,speaker13,clean,stop,stop,True,0.573,1.44
+speaker13_TurnLeft.wav,speaker13,clean,turn left,turn left,True,0.528,1.63
+speaker13_TurnRight.wav,speaker13,clean,turn right,turn right,True,0.49,1.41
+speaker14_MoveBackward.wav,speaker14,clean,move backward,move backward,True,0.621,1.34
+speaker14_MoveForward.wav,speaker14,clean,move forward,move forward,True,0.625,1.32
+speaker14_Stop.wav,speaker14,clean,stop,stop,True,0.484,1.36
+speaker14_TurnLeft.wav,speaker14,clean,turn left,turn left,True,0.573,1.71
+speaker14_TurnRight.wav,speaker14,clean,turn right,turn right,True,0.57,1.49
+speaker15_MoveBackward.wav,speaker15,clean,move backward,move backward,True,0.616,1.54
+speaker15_MoveForward.wav,speaker15,clean,move forward,move forward,True,0.687,1.64
+speaker15_Stop.wav,speaker15,clean,stop,stop,True,0.543,1.31
+speaker15_TurnLeft.wav,speaker15,clean,turn left,turn left,True,0.584,1.32
+speaker15_TurnRight.wav,speaker15,clean,turn right,turn right,True,0.525,1.45
+speaker16_MoveBackward.wav,speaker16,clean,move backward,move backward,True,0.584,1.36
+speaker16_MoveForward.wav,speaker16,clean,move forward,move forward,True,0.628,1.36
+speaker16_Stop.wav,speaker16,clean,stop,stop,True,0.492,1.62
+speaker16_TurnLeft.wav,speaker16,clean,turn left,turn left,True,0.543,2.49
+speaker16_TurnRight.wav,speaker16,clean,turn right,turn right,True,0.506,1.62
+speaker17_MoveBackward.wav,speaker17,clean,move backward,move backward,True,0.494,1.74
+speaker17_MoveForward.wav,speaker17,clean,move forward,move forward,True,0.671,1.45
+speaker17_Stop.wav,speaker17,clean,stop,stop,True,0.477,1.46
+speaker17_TurnLeft.wav,speaker17,clean,turn left,turn left,True,0.568,1.69
+speaker17_TurnRight.wav,speaker17,clean,turn right,turn right,True,0.537,1.81
+speaker18_MoveBackward.wav,speaker18,clean,move backward,move backward,True,0.646,1.5
+speaker18_MoveForward.wav,speaker18,clean,move forward,move forward,True,0.587,1.5
+speaker18_Stop.wav,speaker18,clean,stop,stop,True,0.511,1.31
+speaker18_TurnLeft.wav,speaker18,clean,turn left,turn left,True,0.555,1.41
+speaker18_TurnRight.wav,speaker18,clean,turn right,turn right,True,0.559,1.52
+speaker19_MoveBackward.wav,speaker19,clean,move backward,move backward,True,0.573,1.71
+speaker19_MoveForward.wav,speaker19,clean,move forward,move forward,True,0.554,1.73
+speaker19_Stop.wav,speaker19,clean,stop,stop,True,0.51,1.45
+speaker19_TurnLeft.wav,speaker19,clean,turn left,turn left,True,0.591,1.56
+speaker19_TurnRight.wav,speaker19,clean,turn right,turn right,True,0.585,1.44
+speaker1_MoveBackward.wav,speaker1,clean,move backward,move backward,True,0.718,1.44
+speaker1_MoveForward.wav,speaker1,clean,move forward,move forward,True,0.626,1.58
+speaker1_Stop.wav,speaker1,clean,stop,stop,True,0.465,1.77
+speaker1_TurnLeft.wav,speaker1,clean,turn left,turn left,True,0.471,12.33
+speaker1_TurnRight.wav,speaker1,clean,turn right,turn right,True,0.528,1.82
+speaker20_MoveBackward.wav,speaker20,clean,move backward,move backward,True,0.585,2.18
+speaker20_MoveForward.wav,speaker20,clean,move forward,move forward,True,0.569,1.45
+speaker20_Stop.wav,speaker20,clean,stop,stop,True,0.537,1.47
+speaker20_TurnLeft.wav,speaker20,clean,turn left,turn left,True,0.594,1.66
+speaker20_TurnRight.wav,speaker20,clean,turn right,turn right,True,0.594,1.69
+speaker2_MoveBackward.wav,speaker2,clean,move backward,move backward,True,0.641,1.51
+speaker2_MoveForward.wav,speaker2,clean,move forward,move forward,True,0.685,1.42
+speaker2_Stop.wav,speaker2,clean,stop,stop,True,0.493,1.38
+speaker2_TurnLeft.wav,speaker2,clean,turn left,turn left,True,0.498,17.32
+speaker2_TurnRight.wav,speaker2,clean,turn right,turn right,True,0.582,1.48
+speaker3_MoveBackward.wav,speaker3,clean,move backward,move backward,True,0.412,1.36
+speaker3_MoveForward.wav,speaker3,clean,move forward,move forward,True,0.4,1.48
+speaker3_Stop.wav,speaker3,clean,stop,stop,True,0.496,1.32
+speaker3_TurnLeft.wav,speaker3,clean,turn left,turn left,True,0.524,1.61
+speaker3_TurnRight.wav,speaker3,clean,turn right,turn right,True,0.478,12.57
+speaker4_MoveBackward.wav,speaker4,clean,move backward,move backward,True,0.552,1.72
+speaker4_MoveForward.wav,speaker4,clean,move forward,move forward,True,0.626,1.39
+speaker4_Stop.wav,speaker4,clean,stop,stop,True,0.448,1.33
+speaker4_TurnLeft.wav,speaker4,clean,turn left,turn left,True,0.573,1.36
+speaker4_TurnRight.wav,speaker4,clean,turn right,turn right,True,0.547,1.59
+speaker5_MoveBackward.wav,speaker5,clean,move backward,move backward,True,0.65,1.39
+speaker5_MoveForward.wav,speaker5,clean,move forward,move forward,True,0.589,2.46
+speaker5_Stop.wav,speaker5,clean,stop,,False,0.45,2.4
+speaker5_TurnLeft.wav,speaker5,clean,turn left,turn left,True,0.557,1.47
+speaker5_TurnRight.wav,speaker5,clean,turn right,turn right,True,0.562,1.33
+speaker6_MoveBackward.wav,speaker6,clean,move backward,move backward,True,0.602,1.44
+speaker6_MoveForward.wav,speaker6,clean,move forward,move forward,True,0.665,1.35
+speaker6_Stop.wav,speaker6,clean,stop,stop,True,0.402,1.63
+speaker6_TurnLeft.wav,speaker6,clean,turn left,turn left,True,0.532,1.97
+speaker6_TurnRight.wav,speaker6,clean,turn right,turn right,True,0.61,1.66
+speaker7_MoveBackward.wav,speaker7,clean,move backward,move backward,True,0.655,1.41
+speaker7_MoveForward.wav,speaker7,clean,move forward,move forward,True,0.682,1.35
+speaker7_Stop.wav,speaker7,clean,stop,stop,True,0.538,1.41
+speaker7_TurnLeft.wav,speaker7,clean,turn left,turn left,True,0.536,1.39
+speaker7_TurnRight.wav,speaker7,clean,turn right,turn right,True,0.519,1.52
+speaker8_MoveBackward.wav,speaker8,clean,move backward,move backward,True,0.512,1.56
+speaker8_MoveForward.wav,speaker8,clean,move forward,move forward,True,0.526,1.62
+speaker8_Stop.wav,speaker8,clean,stop,stop,True,0.599,2.33
+speaker8_TurnLeft.wav,speaker8,clean,turn left,turn left,True,0.542,1.65
+speaker8_TurnRight.wav,speaker8,clean,turn right,turn right,True,0.531,1.57
+speaker9_MoveBackward.wav,speaker9,clean,move backward,move backward,True,0.59,1.5
+speaker9_MoveForward.wav,speaker9,clean,move forward,move forward,True,0.635,2.02
+speaker9_Stop.wav,speaker9,clean,stop,stop,True,0.441,1.63
+speaker9_TurnLeft.wav,speaker9,clean,turn left,turn left,True,0.608,1.37
+speaker9_TurnRight.wav,speaker9,clean,turn right,turn right,True,0.615,1.31
